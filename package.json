@@ -1,0 +1,26 @@
+{
+  "name": "http2-demo",
+  "version": "1.0.0",
+  "description": "HTTP/2 Protocol Demo. 📡",
+  "main": "index.js",
+  "scripts": {
+    "start": "npm run dev",
+    "dev": "nodemon src/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/qvil-playground/http2-demo.git"
+  },
+  "keywords": [
+    "http2"
+  ],
+  "author": "Taesu Hyeon <qvil1127@gmail.com> (https://github.com/qvil)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/qvil-playground/http2-demo/issues"
+  },
+  "homepage": "https://github.com/qvil-playground/http2-demo#readme",
+  "devDependencies": {
+    "nodemon": "^1.18.11"
+  }
+}
