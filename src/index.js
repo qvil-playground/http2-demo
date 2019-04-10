@@ -2,12 +2,16 @@
 const http2 = require("http2");
 const fs = require("fs");
 const path = require("path");
+const app = require("./app");
 
 const PORT = 8443;
-const server = http2.createSecureServer({
-  key: fs.readFileSync("localhost-privkey.pem"),
-  cert: fs.readFileSync("localhost-cert.pem")
-});
+const server = http2.createSecureServer(
+  {
+    key: fs.readFileSync("localhost-privkey.pem"),
+    cert: fs.readFileSync("localhost-cert.pem")
+  },
+  app
+);
 server.on("error", err => console.error(err));
 
 server.on("stream", (stream, headers) => {
